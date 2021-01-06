@@ -75,7 +75,7 @@ module.exports = async function exportAssets( selection, root, scale, format )
     const files = [];
     for ( var i = 0; i<selection.items.length; i++ )
     {
-        const file = await folder.createFile((selection.items[i].name.replace(/[^a-z0-9]/gi, '_').toLowerCase() + "." + format), {overwrite:true} );
+        const file = await folder.createFile((selection.items[i].name.replace(/[^a-z0-9]/gi, '_') + "." + format), {overwrite:true} );
         files.push(file);
     }
 
